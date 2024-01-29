@@ -105,8 +105,8 @@
 		(function() {
 
 			// Vars.
-				var $form = document.querySelectorAll('#signup-form2')[0],
-					$submit = document.querySelectorAll('#signup-form2 input[type="submit"]')[0],
+				var $form = document.querySelectorAll('#signup-form')[0],
+					$submit = document.querySelectorAll('#signup-form input[type="submit"]')[0],
 					$message;
 
 			// Bail if addEventListener isn't supported.
@@ -136,7 +136,7 @@
 
 			// Events.
 			// Note: If you're *not* using AJAX, get rid of this event listener.
-				$form.addEventListener('submit', function(event) {
+				/*$form.addEventListener('submit', function(event) {
 
 					event.stopPropagation();
 					event.preventDefault();
@@ -164,7 +164,7 @@
 
 						}, 750);
 
-				});
+				}); */
 
 		})();
 
