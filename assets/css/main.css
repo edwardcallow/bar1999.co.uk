@@ -68,7 +68,7 @@ input, select, textarea {
 body {
   -ms-overflow-style: scrollbar; }
 
-@media screen and (max-width: 480px) {
+/@media screen and (max-width: 480px) {
   html, body {
     min-width: 320px; } }
 
@@ -379,7 +379,8 @@ header h6 + p {
 
 @media screen and (max-width: 980px) {
   header br {
-    display: none; } }
+    /*display: none;*/    /* Annoying not-line-breaking thing */
+    display: inline; } }
 
 @media screen and (max-width: 736px) {
   header br {
@@ -387,7 +388,8 @@ header h6 + p {
 
 @media screen and (max-width: 480px) {
   header br {
-    display: none; } }
+    /*display: none;*/    /* Annoying not-line-breaking thing */
+    display: inline; } }
 
 /* Icon */
 .icon {
@@ -589,7 +591,7 @@ textarea {
   outline: 0;
   padding: 0 1em;
   text-decoration: none;
-  width: 100%; }
+  width: 100%; }    /* Fix text input going off screen on narrow devices */
   input[type="text"]:invalid,
   input[type="password"]:invalid,
   input[type="email"]:invalid,
@@ -746,7 +748,8 @@ button,
   padding: 0 1.125em;
   text-align: center;
   text-decoration: none;
-  white-space: nowrap; }
+  white-space: nowrap; 
+  max-width: 18em; }    /* Prevent odd-size button on narrow screens */
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   input[type="button"]:hover,
@@ -809,7 +812,7 @@ button,
   #signup-form input[type="text"],
   #signup-form input[type="password"],
   #signup-form input[type="email"] {
-    width: 18em; }
+    max-width: 18em; }
   #signup-form > * {
     margin: 0 0 0 1em; }
   #signup-form > :first-child {
